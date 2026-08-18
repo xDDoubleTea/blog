@@ -75,6 +75,17 @@ This site uses [github-style](https://github.com/MeiK2333/github-style), a theme
 - Site-wide theme options (author, description, avatar, social links, RSS, comments via Gitalk, Google Analytics, etc.) are set under `[params]` in `hugo.toml` — see the theme's [README](https://github.com/MeiK2333/github-style#readme) for the full list.
 - To limit how much of a post shows on the listing page, either set `summary = "..."` in front matter, or add a `<!--more-->` marker in the post body to split preview from full content.
 
+## Theme UI features
+
+- **Tags** — add `tags = ["hugo", "meta"]` to a post's front matter. They render as clickable pills and auto-list at `/tags/<tag>/` via Hugo's standard taxonomy system.
+- **Table of contents** — automatic, no config needed. Built client-side from the post's headings (`toc.js`); opened via the list icon at the top-left of each post.
+- **Dark/light mode toggle** — the switch icon in the top nav bar (`theme-mode.js`). Respects OS preference by default; readers can override.
+- **Pinning a post** — add `pin = true` to front matter to keep it pinned to the top of the post list.
+- **Search** — set `enableSearch = true` under `[params]` in `hugo.toml`. Indexes content client-side (no server needed) and adds a search box to the nav.
+- **Comments (Gitalk)** — set `enableGitalk = true` plus a `[params.gitalk]` block (GitHub OAuth app client ID/secret, repo, owner). Comments are stored as GitHub issues on a repo you choose.
+- **RSS** — already on (`rss = true` in `hugo.toml`); feed is auto-generated at `/index.xml`.
+- **Shortcodes** — this theme adds `{{</* details "Click to expand" */>}}...{{</* /details */>}}` for collapsible sections. Hugo's built-ins also work, e.g. `{{</* figure src="..." caption="..." */>}}`, `{{</* youtube id */>}}`. Code fences get syntax highlighting automatically via the Pygments config already in `hugo.toml`.
+
 ## Publishing
 
 Update `baseURL` in `hugo.toml` to your real domain before deploying, then run `hugo` and serve the contents of `public/`.
