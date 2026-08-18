@@ -1,4 +1,18 @@
 baseURL = 'https://example.org/'
 locale = 'en-us'
 title = 'My New Hugo Project'
-theme = 'ananke'
+theme = 'github-style'
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+[params]
+  author = 'Your Name'
+  description = 'In solitude, where we are least alone.'
+  favicon = '/images/github-mark.png'
+  avatar = '/images/avatar.png'
+  headerIcon = '/images/github-mark-white.png'
+  rss = true
+  lastmod = true
+
+[frontmatter]
+  lastmod = ['lastmod', ':fileModTime', ':default']
