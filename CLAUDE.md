@@ -39,4 +39,4 @@ See `HUGO-GUIDE.md` for a fuller walkthrough of adding pages and Hugo basics.
 
 ## Deployment
 
-`.gitea/workflows/deploy.yml` builds and deploys on every push to `main`: checkout (with submodules) → `hugo --minify` → `wrangler pages deploy ./public --project-name=blog`. Requires `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` as Gitea repo secrets; the Cloudflare Pages project is created automatically on first deploy.
+`.gitea/workflows/deploy.yml` builds and deploys on every push to `main`: checkout (with submodules) → `hugo --minify` → `wrangler deploy`, which pushes `public/` (see `wrangler.toml`'s `[assets]` directory) as static assets to a Cloudflare Worker named `blog`. Requires `CLOUDFLARE_API_TOKEN` (needs Workers Scripts:Edit permission) and `CLOUDFLARE_ACCOUNT_ID` as Gitea repo secrets; the Worker is created automatically on first deploy.

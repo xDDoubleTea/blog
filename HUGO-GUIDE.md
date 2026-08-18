@@ -81,10 +81,8 @@ Update `baseURL` in `hugo.toml` to your real domain before deploying, then run `
 
 ## Deployment (CI)
 
-`.gitea/workflows/deploy.yml` runs on every push to `main`: it checks out the repo (with submodules, for the theme), builds the site with Hugo, and deploys `public/` to Cloudflare Pages (project `blog`) via `wrangler`.
+`.gitea/workflows/deploy.yml` runs on every push to `main`: it checks out the repo (with submodules, for the theme), builds the site with Hugo, and deploys `public/` as static assets to a Cloudflare Worker (`wrangler.toml`, name `blog`) via `wrangler deploy`. `wrangler deploy` creates the Worker automatically on first run — no manual dashboard step needed.
 
 This requires two repo secrets set in Gitea (Settings → Actions → Secrets):
-- `CLOUDFLARE_API_TOKEN`
+- `CLOUDFLARE_API_TOKEN` — must have the **Workers Scripts:Edit** permission (use the "Edit Cloudflare Workers" token template in the Cloudflare dashboard)
 - `CLOUDFLARE_ACCOUNT_ID`
-
-The Cloudflare Pages project doesn't need to be created manually — `wrangler pages deploy` creates it automatically on first run if a project named `blog` doesn't already exist.
