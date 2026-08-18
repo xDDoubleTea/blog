@@ -36,3 +36,7 @@ git submodule update --init --recursive
 New posts are created with `draft = true` by default (from the archetype); set `draft = false` in front matter before they'll appear in a non-`-D` build/server.
 
 See `HUGO-GUIDE.md` for a fuller walkthrough of adding pages and Hugo basics.
+
+## Deployment
+
+`.gitea/workflows/deploy.yml` builds and deploys on every push to `main`: checkout (with submodules) → `hugo --minify` → `wrangler pages deploy ./public --project-name=blog`. Requires `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` as Gitea repo secrets; the Cloudflare Pages project is created automatically on first deploy.
