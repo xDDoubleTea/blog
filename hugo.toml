@@ -1,18 +1,28 @@
 baseURL = 'https://blog.hoshiyomi-dev.work/'
 locale = 'en-us'
-title = 'My New Hugo Project'
+title = 'Blog'
 theme = 'github-style'
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 
 [params]
-  author = 'Your Name'
-  description = 'In solitude, where we are least alone.'
-  favicon = '/images/github-mark.png'
-  avatar = '/images/avatar.png'
-  headerIcon = '/images/github-mark-white.png'
-  rss = true
-  lastmod = true
+author = 'xDDoubleTea'
+description = 'sleep'
+favicon = '/images/github-mark.png'
+avatar = '/images/avatar.jpg'
+github = "xDDoubleTea"
+headerIcon = '/images/github-mark-white.png'
+rss = true
+lastmod = true
+enableSearch = true
 
 [frontmatter]
-  lastmod = ['lastmod', ':fileModTime', ':default']
+lastmod = ['lastmod', ':fileModTime', ':default']
+
+[outputs]
+home = ["html", "json"]
+
+[outputFormats.json]
+mediaType = "application/json"
+baseName = "index"
+isPlainText = false
