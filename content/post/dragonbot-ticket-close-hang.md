@@ -1,6 +1,6 @@
 +++
 date = '2026-10-10T18:25:00+08:00'
-draft = true
+draft = false
 title = 'DragonBot Ticket Close Hang'
 +++
 
@@ -29,18 +29,18 @@ The DM to the customer was also not the cause: `customer.send` already catches `
 
 So I read the close path again, counting how many times the channel gets renamed. A ticket that is answered and closed quickly is renamed **three** times:
 
-| Event | Status | Rename |
-| --- | --- | --- |
-| Staff's first reply | `OPEN` → `IN_PROGRESS` | 1 |
-| Click 關閉頻道 | → `RESOLVED` | 2 |
-| Confirm close (first line of `close_ticket`) | → `CLOSED` | **3** |
+| Event                                        | Status                 | Rename |
+| -------------------------------------------- | ---------------------- | ------ |
+| Staff's first reply                          | `OPEN` → `IN_PROGRESS` | 1      |
+| Click 關閉頻道                               | → `RESOLVED`           | 2      |
+| Confirm close (first line of `close_ticket`) | → `CLOSED`             | **3**  |
 
 ## Root cause
 
 Discord allows only **2 channel renames per channel per 10 minutes**. The third rename has to wait for the window to reset.
 
 - `set_ticket_status` awaited the rename, so `close_ticket` waited on it too.
-- `discord.py` reads the exhausted bucket from the response headers and waits *before* sending the request. Discord never returns a 429, so there is nothing to log.
+- `discord.py` reads the exhausted bucket from the response headers and waits _before_ sending the request. Discord never returns a 429, so there is nothing to log.
 - Even `discord.py`'s own "We are being rate limited" warnings never showed up. The bot starts with `bot.start()`, which, unlike `bot.run()`, does not configure `discord.py`'s logging.
 
 ## The actual fix in code

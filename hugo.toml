@@ -21,19 +21,33 @@ ShowBreadCrumbs = true
 ShowRssButtonInSectionTermList = true
 
 [params.assets]
-favicon = '/images/avatar.jpg'
+favicon = '/favicon.svg'
 
 [params.homeInfoParams]
-Title = 'Hi, I am xDDoubleTea'
-Content = 'Notes on systems, bugs and things I build.'
+Title = "xDDoubleTea's blog"
+Content = '''
+凡所有相，皆是虛妄。若見諸相非相，則見如來。——《金剛經》\
+*All forms are illusory; see forms as no-forms, and you see the Tathāgata.*
+'''
+
+[params.footer]
+text = '*Vanitas vanitatum, et omnia vanitas.*'
 
 [[params.socialIcons]]
 name = 'github'
 url = 'https://github.com/xDDoubleTea'
 
 [[params.socialIcons]]
-name = 'rss'
-url = '/index.xml'
+name = 'leetcode'
+url = 'https://leetcode.com/u/xddoubletea/'
+
+[[params.socialIcons]]
+name = 'discord'
+url = 'https://discord.com/users/398444155132575756'
+
+[[params.socialIcons]]
+name = 'email'
+url = 'mailto:a5457789889409@gmail.com'
 
 [frontmatter]
 lastmod = ['lastmod', ':fileModTime', ':default']
