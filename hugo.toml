@@ -1,28 +1,57 @@
 baseURL = 'https://blog.hoshiyomi-dev.work/'
 locale = 'en-us'
 title = 'Blog'
-theme = 'github-style'
-pygmentsCodeFences = true
-pygmentsUseClasses = true
+theme = 'PaperMod'
+
+[markup.highlight]
+# PaperMod ships its own chroma CSS, so highlight with classes
+noClasses = false
 
 [params]
+env = 'production'
 author = 'xDDoubleTea'
 description = 'sleep'
-favicon = '/images/github-mark.png'
-avatar = '/images/avatar.jpg'
-github = "xDDoubleTea"
-headerIcon = '/images/github-mark-white.png'
-rss = true
-lastmod = true
-enableSearch = true
+defaultTheme = 'auto'
+mainSections = ['post']
+ShowReadingTime = true
+ShowCodeCopyButtons = true
+ShowToc = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowRssButtonInSectionTermList = true
+
+[params.assets]
+favicon = '/images/avatar.jpg'
+
+[params.homeInfoParams]
+Title = 'Hi, I am xDDoubleTea'
+Content = 'Notes on systems, bugs and things I build.'
+
+[[params.socialIcons]]
+name = 'github'
+url = 'https://github.com/xDDoubleTea'
+
+[[params.socialIcons]]
+name = 'rss'
+url = '/index.xml'
 
 [frontmatter]
 lastmod = ['lastmod', ':fileModTime', ':default']
 
 [outputs]
-home = ["html", "json"]
+home = ['html', 'rss', 'json']
 
-[outputFormats.json]
-mediaType = "application/json"
-baseName = "index"
-isPlainText = false
+[[menus.main]]
+name = 'Posts'
+pageRef = '/post'
+weight = 10
+
+[[menus.main]]
+name = 'Archive'
+pageRef = '/archives'
+weight = 20
+
+[[menus.main]]
+name = 'Search'
+pageRef = '/search'
+weight = 30
