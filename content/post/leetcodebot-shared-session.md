@@ -2,6 +2,9 @@
 date = '2026-08-28T20:27:00+08:00'
 draft = false
 title = 'LeetCodeBot: One Session, Many Commands'
+categories = ['Debugging']
+tags = ['python', 'sqlalchemy', 'asyncio', 'testing']
+series = ['LeetCodeBot']
 +++
 
 ## Context

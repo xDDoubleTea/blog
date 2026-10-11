@@ -2,6 +2,8 @@
 date = '2026-08-22T02:45:35+08:00'
 draft = false
 title = 'Kcalc Self Deadlock'
+categories = ['Debugging']
+tags = ['linux-kernel', 'c', 'concurrency']
 +++
 
 ## Context

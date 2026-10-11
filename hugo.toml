@@ -52,6 +52,11 @@ url = 'https://discord.com/users/398444155132575756'
 name = 'email'
 url = 'mailto:a5457789889409@gmail.com'
 
+[taxonomies]
+category = 'categories'
+tag = 'tags'
+series = 'series'
+
 [frontmatter]
 lastmod = ['lastmod', ':fileModTime', ':default']
 
@@ -62,6 +67,16 @@ home = ['html', 'rss', 'json']
 name = 'Posts'
 pageRef = '/post'
 weight = 10
+
+[[menus.main]]
+name = 'Categories'
+pageRef = '/categories'
+weight = 13
+
+[[menus.main]]
+name = 'Tags'
+pageRef = '/tags'
+weight = 16
 
 [[menus.main]]
 name = 'Archive'

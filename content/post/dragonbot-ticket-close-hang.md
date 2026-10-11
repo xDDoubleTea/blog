@@ -2,6 +2,8 @@
 date = '2026-10-10T18:25:00+08:00'
 draft = false
 title = 'DragonBot Ticket Close Hang'
+categories = ['Debugging']
+tags = ['python', 'discord.py', 'rate-limit']
 +++
 
 ## Context
