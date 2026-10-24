@@ -13,7 +13,7 @@ and finally being able to say "I use arch btw".
 
 Some users are attracted to it because of the tiling window manager show cases in [r/unixporn](https://www.reddit.com/r/unixporn/top/?t=all) on reddit.
 
-Personally, I use [Arch Linux] (btw) and [Hyprland](https://hyprland.org).
+Personally, I use [Arch Linux](https://archlinux.org) (btw) and [Hyprland](https://hyprland.org).
 
 ## What are those and how do I install?
 
