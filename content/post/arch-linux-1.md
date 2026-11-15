@@ -1,10 +1,15 @@
-+++
-date = '2026-10-24T04:10:29+08:00'
-draft = false
-title = 'Arch Linux (0)'
-categories = ['Linux Stuff']
-tags = ['linux', 'hyprland', 'gslapper', 'linux-ricing', 'unixporn']
-+++
+---
+date: "2026-10-24T04:10:29+08:00"
+draft: false
+title: "Arch Linux (0)"
+cover:
+  image: "https://blog-assets.hoshiyomi-dev.work/archlinux-simple-cover.png"
+  alt: "archlinux simple"
+  caption: "archlinux"
+categories: ["Linux Stuff"]
+tags: ["linux", "hyprland", "gslapper", "linux-ricing", "unixporn"]
+series: ["Arch Linux"]
+---
 
 ## Arch Linux
 
