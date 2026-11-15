@@ -1,0 +1,44 @@
+{{- /* HackMD-style TOC rail: ticks show reading progress, hover opens the TOC. Lives in extend_post_content (uncached); PaperMod caches the footer, so extend_footer would reuse one post's TOC everywhere */ -}}
+{{- if and .IsPage (findRE `<a href="#` .TableOfContents 1) }}
+<aside class="toc-rail" aria-label="Table of contents">
+  <div class="toc-rail-ticks" aria-hidden="true"></div>
+  <div class="toc-rail-panel">
+    <div class="toc-rail-title">目錄</div>
+    {{ .TableOfContents }}
+  </div>
+</aside>
+<script>
+(() => {
+  const rail = document.querySelector('.toc-rail');
+  const links = [...rail.querySelectorAll('.toc-rail-panel a[href^="#"]')];
+  const ticksBox = rail.querySelector('.toc-rail-ticks');
+  const items = links.map(a => {
+    const el = document.getElementById(decodeURIComponent(a.hash.slice(1)));
+    let depth = 0;
+    for (let p = a.parentElement; p && p !== rail; p = p.parentElement) if (p.tagName === 'UL') depth++;
+    const tick = document.createElement('span');
+    tick.className = 'toc-rail-tick';
+    tick.style.width = Math.max(6, 16 - (depth - 1) * 4) + 'px';
+    ticksBox.appendChild(tick);
+    return { a, el, tick };
+  }).filter(i => i.el);
+
+  let current = -1;
+  const update = () => {
+    const y = 120;
+    let idx = -1;
+    items.forEach((it, i) => { if (it.el.getBoundingClientRect().top <= y) idx = i; });
+    if (idx === current) return;
+    current = idx;
+    items.forEach((it, i) => {
+      it.tick.classList.toggle('read', i <= idx);
+      it.tick.classList.toggle('active', i === idx);
+      it.a.classList.toggle('active', i === idx);
+    });
+  };
+  addEventListener('scroll', update, { passive: true });
+  addEventListener('resize', update);
+  update();
+})();
+</script>
+{{- end }}

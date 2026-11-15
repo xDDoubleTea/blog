@@ -2,6 +2,25 @@ baseURL = 'https://blog.hoshiyomi-dev.work/'
 locale = 'en-us'
 title = 'Blog'
 theme = 'PaperMod'
+# Count CJK characters as words, so word count and reading time work for Chinese posts
+hasCJKLanguage = true
+
+[markup.goldmark.renderer]
+# Pass raw HTML in Markdown through instead of replacing it with <!-- raw HTML omitted -->
+unsafe = true
+
+[markup.goldmark.extensions.passthrough]
+# Leave math untouched by Markdown; layouts/_markup/render-passthrough.html renders it
+enable = true
+[markup.goldmark.extensions.passthrough.delimiters]
+# Only dollar delimiters: \[ \] is used for literal brackets in link text
+block = [['$$', '$$']]
+inline = [['$', '$']]
+
+[markup.tableOfContents]
+# Posts use # for top-level sections, so include h1
+startLevel = 1
+endLevel = 3
 
 [markup.highlight]
 # PaperMod ships its own chroma CSS, so highlight with classes
@@ -18,6 +37,7 @@ ShowCodeCopyButtons = true
 ShowToc = true
 ShowPostNavLinks = true
 ShowBreadCrumbs = true
+# ShowShareButtons = true
 ShowRssButtonInSectionTermList = true
 
 [params.assets]
@@ -52,6 +72,19 @@ url = 'https://discord.com/users/398444155132575756'
 [[params.socialIcons]]
 name = 'email'
 url = 'mailto:a5457789889409@gmail.com'
+
+[params.profileMode]
+enabled = true
+title = "Blog"
+subtitle = "I play Blue Archive"
+
+[[params.profileMode.buttons]]
+name = "Posts"
+url = "/post"
+
+[[params.profileMode.buttons]]
+name = "Archive"
+url = "/archive"
 
 [taxonomies]
 category = 'categories'

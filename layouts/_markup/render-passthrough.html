@@ -1,0 +1,10 @@
+{{- /* Render $…$ / $$…$$ math to HTML at build time with KaTeX (no client JS) */ -}}
+{{- $opts := dict "output" "htmlAndMathml" "displayMode" (eq .Type "block") }}
+{{- with try (transform.ToMath .Inner $opts) }}
+  {{- with .Err }}
+    {{- errorf "KaTeX failed to render %q: %s (%s)" $.Inner . $.Position }}
+  {{- else }}
+    {{- .Value }}
+    {{- $.Page.Store.Set "hasMath" true }}
+  {{- end }}
+{{- end -}}
