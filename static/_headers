@@ -1,0 +1,5 @@
+# Workers Static Assets response headers (copied to public/ by Hugo)
+
+# Search-page data file: crawlable, but keep it out of search results
+/index.json
+  X-Robots-Tag: noindex
