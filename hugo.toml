@@ -4,6 +4,8 @@ title = 'Blog'
 theme = 'PaperMod'
 # Count CJK characters as words, so word count and reading time work for Chinese posts
 hasCJKLanguage = true
+# Generate robots.txt (PaperMod's template points crawlers at the sitemap)
+enableRobotsTXT = true
 
 [markup.goldmark.renderer]
 # Pass raw HTML in Markdown through instead of replacing it with <!-- raw HTML omitted -->
