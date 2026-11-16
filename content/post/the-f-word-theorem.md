@@ -2,6 +2,7 @@
 date: "2026-11-16T17:06:10+08:00"
 draft: false
 title: "The F Word Theorem"
+description: "如何用數學符號搞出一個很奇怪的定理"
 categories: ["Math"]
 tags: ["高等微積分", "拓樸學", "advanced-calculus", "topology", "math"]
 series: ["奇怪的數學"]
