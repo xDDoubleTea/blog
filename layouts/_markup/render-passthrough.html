@@ -5,6 +5,5 @@
     {{- errorf "KaTeX failed to render %q: %s (%s)" $.Inner . $.Position }}
   {{- else }}
     {{- .Value }}
-    {{- $.Page.Store.Set "hasMath" true }}
   {{- end }}
 {{- end -}}
