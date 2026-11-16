@@ -1,0 +1,30 @@
+/* Admonitions from GitHub-style alerts (layouts/_markup/render-blockquote.html) */
+.admonition {
+    --adm: rgb(9, 105, 218);
+    margin: 1.2em 0;
+    padding: 10px 16px;
+    border-left: 4px solid var(--adm);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    background: color-mix(in srgb, var(--adm) 9%, var(--theme));
+}
+.admonition-note      { --adm: rgb(9, 105, 218); }
+.admonition-tip       { --adm: rgb(26, 127, 55); }
+.admonition-important { --adm: rgb(130, 80, 223); }
+.admonition-warning   { --adm: rgb(154, 103, 0); }
+.admonition-caution   { --adm: rgb(207, 34, 46); }
+
+:root[data-theme="dark"] .admonition-note      { --adm: rgb(68, 147, 248); }
+:root[data-theme="dark"] .admonition-tip       { --adm: rgb(63, 185, 80); }
+:root[data-theme="dark"] .admonition-important { --adm: rgb(171, 125, 248); }
+:root[data-theme="dark"] .admonition-warning   { --adm: rgb(210, 153, 34); }
+:root[data-theme="dark"] .admonition-caution   { --adm: rgb(248, 81, 73); }
+
+.admonition-title {
+    margin: 0 0 4px;
+    font-weight: 600;
+    color: var(--adm);
+}
+summary.admonition-title { cursor: pointer; margin: 0; }
+details.admonition[open] > summary.admonition-title { margin-bottom: 4px; }
+.post-content .admonition-body > :first-child { margin-top: 0; }
+.post-content .admonition-body > :last-child { margin-bottom: 0; }
