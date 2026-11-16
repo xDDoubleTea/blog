@@ -1,4 +1,6 @@
-{{- /* KaTeX stylesheet, only on pages that contain math */ -}}
+{{- /* KaTeX stylesheet, only on pages that contain math. Must match the KaTeX that
+       Hugo bundles for transform.ToMath: since 0.18 KaTeX prefixes classes
+       (katex-strut, katex-base), and older CSS breaks sub/superscripts. */ -}}
 {{- if .Store.Get "hasMath" }}
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.19.1/dist/katex.min.css" crossorigin="anonymous">
 {{- end }}

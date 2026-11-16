@@ -1,0 +1,19 @@
+{{- /* GitHub-style alerts as admonitions: > [!NOTE], [!TIP], [!IMPORTANT], [!WARNING], [!CAUTION].
+       Optional title: > [!TIP] My title. Foldable: [!TIP]- (closed) or [!TIP]+ (open). */ -}}
+{{- if eq .Type "alert" }}
+  {{- $type := lower .AlertType }}
+  {{- $title := or .AlertTitle (title $type) }}
+  {{- if .AlertSign }}
+<details class="admonition admonition-{{ $type }}"{{ if eq .AlertSign "+" }} open{{ end }}>
+  <summary class="admonition-title">{{ $title }}</summary>
+  <div class="admonition-body">{{ .Text }}</div>
+</details>
+  {{- else }}
+<div class="admonition admonition-{{ $type }}">
+  <p class="admonition-title">{{ $title }}</p>
+  <div class="admonition-body">{{ .Text }}</div>
+</div>
+  {{- end }}
+{{- else }}
+<blockquote>{{ .Text }}</blockquote>
+{{- end }}
