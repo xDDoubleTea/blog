@@ -2,6 +2,7 @@
 date: "2026-11-15T19:11:57+08:00"
 draft: false
 title: "116交大資工丁組推甄紀錄"
+description: "116 交大資工丁組推甄：備審、性向測驗、面試和備取紀錄"
 cover:
   image: "https://blog-assets.hoshiyomi-dev.work/nycu-admi-post-cover.png"
   alt: "交大碩士班甄試入學網頁"
