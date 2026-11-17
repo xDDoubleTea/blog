@@ -1,6 +1,6 @@
 ---
 date: "2026-11-17T18:31:38+08:00"
-draft: true
+draft: false
 title: "交大資工所丁組備取紀錄"
 description: "交大資工所丁組備取資訊解析"
 cover:
