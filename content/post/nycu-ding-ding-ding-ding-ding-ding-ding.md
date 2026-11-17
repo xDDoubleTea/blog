@@ -19,20 +19,26 @@ series: ["研究所推甄"]
 
 ## 競賽經歷
 
+{{<collapse summary="Very cool">}}
 <center>404 Not Found</center>
 <hr><center>nginx</center>
+{{</collapse>}}
 
 ## 專題
 
+{{<collapse summary="Very cool">}}
 <center>404 Not Found</center>
 <hr><center>nginx</center>
+{{</collapse>}}
 
 至少這個部分不是學校的，完全是自己的side project，做的時候完全沒有想說要推甄啥的，好玩而已
 
 ## 檢定
 
+{{<collapse summary="Very cool">}}
 <center>404 Not Found</center>
 <hr><center>nginx</center>
+{{</collapse>}}
 
 ## 資工修課
 

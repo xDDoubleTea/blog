@@ -39,7 +39,10 @@ ShowCodeCopyButtons = true
 ShowToc = true
 ShowPostNavLinks = true
 ShowBreadCrumbs = true
-# ShowShareButtons = true
+ShowShareButtons = true
+# Buttons to show (order is fixed by the template; threads, added in
+# layouts/_partials/share_icons.html, always comes last)
+ShareButtons = ['x', 'threads', 'reddit', 'facebook', 'telegram', 'ycombinator']
 ShowRssButtonInSectionTermList = true
 
 [params.assets]
@@ -77,7 +80,7 @@ url = 'mailto:a5457789889409@gmail.com'
 
 [params.profileMode]
 enabled = true
-title = "Blog"
+title = "Blog兼廢文專區"
 subtitle = "I play Blue Archive"
 
 [[params.profileMode.buttons]]
@@ -118,6 +121,11 @@ weight = 16
 name = 'Archive'
 pageRef = '/archives'
 weight = 20
+
+[[menus.main]]
+name = 'Series'
+pageRef = '/series'
+weight = 21
 
 [[menus.main]]
 name = 'Search'
