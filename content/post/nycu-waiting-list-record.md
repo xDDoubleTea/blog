@@ -63,6 +63,6 @@ series: ["研究所推甄"]
 
 {{<collapse summary="報到狀況：備取1，1920068確定放棄">}}
 
-![報到狀況](https://blog-assets.hoshiyomi-dev.work/nycu-admission-waiting-list-2026-11-18T14%3A18%3A46%2B08%3A00.png)
+![報到狀況](https://blog-assets.hoshiyomi-dev.work/nycu-admission-waiting-list-2026-11-20T18%3A32%3A29%2B08%3A00.png)
 
 {{</collapse>}}
