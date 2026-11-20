@@ -51,7 +51,17 @@ series: ["研究所推甄"]
 
 [116學年度陽明交通大學碩士班甄試入學 資訊工程學系各所組第1階段備取生名單及報到注意事項 - 國立陽明交通大學資訊工程學系](https://www.cs.nycu.edu.tw/announcements/detail/14459)
 
-{{<collapse summary="報到狀況，逕取1920021確定放棄">}}
+{{<collapse summary="報到狀況：逕取1920021確定放棄">}}
+
+![報到狀況](https://blog-assets.hoshiyomi-dev.work/nycu-admission-waiting-list-2026-11-18T14%3A18%3A46%2B08%3A00.png)
+
+{{</collapse>}}
+
+### 2026-11-20T18:33:16+08:00
+
+[116學年度陽明交通大學碩士班甄試入學 資訊工程學系各所組第2階段備取生名單及報到注意事項 - 國立陽明交通大學資訊工程學系](https://www.cs.nycu.edu.tw/announcements/detail/14464)
+
+{{<collapse summary="報到狀況：備取1，1920068確定放棄">}}
 
 ![報到狀況](https://blog-assets.hoshiyomi-dev.work/nycu-admission-waiting-list-2026-11-18T14%3A18%3A46%2B08%3A00.png)
 
