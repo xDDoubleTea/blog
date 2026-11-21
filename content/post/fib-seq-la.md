@@ -8,7 +8,7 @@ tags:
   [
     "線性代數",
     "離散數學",
-    "discrete-mathmatics",
+    "discrete-mathematics",
     "computer-science",
     "math",
     "linear-algebra",
