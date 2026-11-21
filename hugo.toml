@@ -44,6 +44,15 @@ ShowShareButtons = true
 # layouts/_partials/share_icons.html, always comes last)
 ShareButtons = ['x', 'threads', 'reddit', 'facebook', 'telegram', 'ycombinator']
 ShowRssButtonInSectionTermList = true
+# giscus comments on posts (layouts/_partials/comments.html); hidden until categoryId is set
+comments = true
+
+[params.giscus]
+repo = 'xDDoubleTea/blog'   # GitHub push mirror of this repo; Discussions must be on
+repoId = 'R_kgDOV2YBKA'
+category = 'Announcements'  # only maintainers and giscus can open threads there
+categoryId = 'DIC_kwDOV2YBKM4DLozI'
+lang = 'zh-TW'
 
 [params.assets]
 favicon = '/favicon.svg'
