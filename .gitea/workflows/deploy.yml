@@ -16,7 +16,7 @@ jobs:
         with:
           # Keep equal to the local Hugo: transform.ToMath bundles KaTeX, and the
           # KaTeX CSS version in layouts/_partials/extend_head.html must match it
-          hugo-version: '0.169.0'
+          hugo-version: '0.170.1'
           extended: true
 
       - name: Build site
