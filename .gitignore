@@ -3,3 +3,6 @@
 /.hugo_build.lock
 /.wrangler/
 /node_modules/
+
+# Local helper scripts (e.g. cropcol.py for redacting screenshots)
+/scripts/
