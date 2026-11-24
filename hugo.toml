@@ -48,9 +48,9 @@ ShowRssButtonInSectionTermList = true
 comments = true
 
 [params.giscus]
-repo = 'xDDoubleTea/blog'   # GitHub push mirror of this repo; Discussions must be on
+repo = 'xDDoubleTea/blog'           # GitHub push mirror of this repo; Discussions must be on
 repoId = 'R_kgDOV2YBKA'
-category = 'Announcements'  # only maintainers and giscus can open threads there
+category = 'Announcements'          # only maintainers and giscus can open threads there
 categoryId = 'DIC_kwDOV2YBKM4DLozI'
 lang = 'zh-TW'
 
@@ -85,7 +85,7 @@ url = 'https://discord.com/users/398444155132575756'
 
 [[params.socialIcons]]
 name = 'email'
-url = 'mailto:a5457789889409@gmail.com'
+url = 'mailto:susamogus@hoshiyomi-dev.work'
 
 [params.profileMode]
 enabled = true
