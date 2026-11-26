@@ -189,7 +189,7 @@ $$
 設$U\in\mathcal{T}$，此時若給定$x\in U$，那麼，就存在$a,b\in\mathbb{R}$，使得$x\in(a,b)\subset U$。我們可以取
 
 $$
-r=\min(\frac{b-x}{2},\frac{x-a}{2})
+r=\min\left(\frac{b-x}{2},\frac{x-a}{2}\right)
 $$
 
 那麼，$x\in(x-r,x+r)\subset (a,b)\subset U$，所以，$U\in\mathcal{T}'$。
