@@ -1,6 +1,6 @@
 baseURL = 'https://blog.hoshiyomi-dev.work/'
 locale = 'en-us'
-title = 'Blog'
+title = "Hoshiyomi's blog"
 theme = 'PaperMod'
 # Count CJK characters as words, so word count and reading time work for Chinese posts
 hasCJKLanguage = true
@@ -30,7 +30,7 @@ noClasses = false
 
 [params]
 env = 'production'
-author = 'xDDoubleTea'
+author = 'hoshiyomi6942'
 description = 'sleep'
 defaultTheme = 'auto'
 mainSections = ['post']
