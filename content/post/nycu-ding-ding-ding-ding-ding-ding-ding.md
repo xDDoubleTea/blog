@@ -1,7 +1,7 @@
 ---
 date: "2026-11-15T19:11:57+08:00"
 draft: false
-title: "116交大資工丁組推甄紀錄"
+title: "116交大資工研究所丁組推甄心得"
 description: "116 交大資工丁組推甄：心得、備審、性向測驗、面試和備取紀錄。以外系身分進頂大資工所？數學系跨領域真的比較吃香嗎？"
 cover:
   image: "https://blog-assets.hoshiyomi-dev.work/nycu-admi-post-cover.png"
@@ -11,7 +11,7 @@ tags: ["推甄", "nycu", "紀錄"]
 series: ["研究所推甄"]
 ---
 
-# 背景
+## 背景
 
 清大數學系輔資工系，GPA班排42%，但因為丁組完全不看成績，所以基本沒差。
 
